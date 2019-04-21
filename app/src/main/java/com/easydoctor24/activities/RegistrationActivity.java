@@ -12,12 +12,17 @@ public class RegistrationActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        View patientFragment = findViewById(R.id.fr_patient);
+        patientFragment.setVisibility(View.GONE);
     }
 
     public void patientClicked(View view) {
         View regFragment = findViewById(R.id.fr_registration);
         regFragment.setVisibility(View.GONE);
-        Toast.makeText(this, "Patient Clicked", Toast.LENGTH_SHORT).show();
+
+        View patientFragment = findViewById(R.id.fr_patient);
+        patientFragment.setVisibility(View.VISIBLE);
     }
 
     public void doctorOnclick(View view) {

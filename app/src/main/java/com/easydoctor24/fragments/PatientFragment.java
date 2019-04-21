@@ -9,14 +9,13 @@ import android.view.ViewGroup;
 
 import com.easydoctor24.R;
 
-public class RegistrationFragment extends Fragment {
-
+public class PatientFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup vg, Bundle bundle) {
         // load the GUI layout from the XML
-        return inflater.inflate(R.layout.fragment_registration, vg, false);
+        return inflater.inflate(R.layout.fragment_patient, vg, false);
     }
 
     public void onActivityCreated(Bundle savedState) {

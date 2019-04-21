@@ -12,5 +12,14 @@
         android:name="com.easydoctor24.fragments.RegistrationFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        tools:layout="@layout/fragment_registration"/>
+
+    <fragment
+        android:id="@+id/fr_patient"
+        android:name="com.easydoctor24.fragments.PatientFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         tools:layout="@layout/fragment_patient"/>
+
+
 </LinearLayout>
