@@ -15,6 +15,9 @@ public class RegistrationActivity extends BaseActivity {
 
         View patientFragment = findViewById(R.id.fr_patient);
         patientFragment.setVisibility(View.GONE);
+
+        View doctorFragment = findViewById(R.id.fr_doctor);
+        doctorFragment.setVisibility(View.GONE);
     }
 
     public void patientClicked(View view) {
@@ -26,6 +29,10 @@ public class RegistrationActivity extends BaseActivity {
     }
 
     public void doctorOnclick(View view) {
-        Toast.makeText(this, "Doctor Clicked", Toast.LENGTH_SHORT).show();
+        View regFragment = findViewById(R.id.fr_registration);
+        regFragment.setVisibility(View.GONE);
+
+        View doctorFragment = findViewById(R.id.fr_doctor);
+        doctorFragment.setVisibility(View.VISIBLE);
     }
 }

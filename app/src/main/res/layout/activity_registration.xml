@@ -21,5 +21,12 @@
         android:layout_height="match_parent"
         tools:layout="@layout/fragment_patient"/>
 
+    <fragment
+        android:id="@+id/fr_doctor"
+        android:name="com.easydoctor24.fragments.DoctorFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_doctor"/>
+
 
 </LinearLayout>
