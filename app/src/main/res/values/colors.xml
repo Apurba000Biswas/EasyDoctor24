@@ -2,7 +2,8 @@
 <resources>
     <color name="colorPrimary">#6271BB</color>
     <color name="colorPrimaryDark">#6271BB</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#6271BB</color>
 
     <color name="colorDefaultText">#6271BB</color>
+    <color name="colorRegisterButtonText">#FFFFFF</color>
 </resources>

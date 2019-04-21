@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Easy Doctor 24</string>
+
+    <string name="register" >Register as</string>
+    <string name="patient" >Patient</string>
+    <string name="doc">Doctor</string>
+    <string name="with_us">With us now</string>
 </resources>
