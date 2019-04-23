@@ -5,4 +5,7 @@
     <string name="patient" >Patient</string>
     <string name="doc">Doctor</string>
     <string name="with_us">With us now</string>
+
+    <string name="hintName">Enter your name</string>
+    <string name="hintPhoneNum" >Enter your phone number</string>
 </resources>

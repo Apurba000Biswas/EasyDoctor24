@@ -28,7 +28,7 @@ public class RegistrationActivity extends BaseActivity {
         patientFragment.setVisibility(View.VISIBLE);
     }
 
-    public void doctorOnclick(View view) {
+    public void doctorClicked(View view) {
         View regFragment = findViewById(R.id.fr_registration);
         regFragment.setVisibility(View.GONE);
 
