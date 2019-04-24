@@ -2,24 +2,26 @@
 <LinearLayout
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="80dp"
+    android:layout_margin="10dp"
+    android:gravity="center"
     android:layout_height="wrap_content">
 
     <FrameLayout
         android:background="@drawable/shape_circle"
-        android:layout_width="100dp"
+        android:layout_width="60dp"
         android:layout_gravity="center_horizontal"
-        android:layout_height="100dp">
+        android:layout_height="60dp">
         <ImageView
             android:id="@+id/iv_categoryItem_logo"
             android:layout_gravity="center"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
     </FrameLayout>
 
 
     <TextView
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textColor="@android:color/black"
         android:gravity="center_horizontal"
         android:text="Demo Text"
@@ -31,8 +33,10 @@
         android:text="Demo Count"
         android:id="@+id/tv_categoryItem_count"
         android:textColor="@color/colorAppGray"
-        android:textSize="16sp"
+        android:textSize="13sp"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
+        android:maxLines="3"
         android:layout_height="wrap_content" />
 
 </LinearLayout>

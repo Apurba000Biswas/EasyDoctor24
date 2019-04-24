@@ -41,7 +41,7 @@ public class CategoryRVAdapter extends RecyclerView.Adapter<CategoryRVAdapter.Vi
         holder.ivImgId.setImageResource(currentData.getImgId());
         holder.tvName.setText(currentData.getName());
         String totalDoc = currentData.getTotalDoctor() + " Doctors";
-        holder.tvName.setText(totalDoc);
+        holder.tvTotalDoctor.setText(totalDoc);
     }
 
     @Override

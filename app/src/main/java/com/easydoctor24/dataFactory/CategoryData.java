@@ -24,6 +24,16 @@ public class CategoryData {
         dataList.add(new CategoryItem(R.drawable.heart, "Heart", 1245));
         dataList.add(new CategoryItem(R.drawable.heart, "Heart", 1245));
         dataList.add(new CategoryItem(R.drawable.heart, "Heart", 1245));
+        dataList.add(new CategoryItem(R.drawable.blood_drop, "Eye Specialist", 1539));
+        dataList.add(new CategoryItem(R.drawable.blood_drop, "Eye Specialist", 1539));
+        dataList.add(new CategoryItem(R.drawable.blood_drop, "Eye Specialist", 1539));
+        dataList.add(new CategoryItem(R.drawable.blood_drop, "Eye Specialist", 1539));
+        dataList.add(new CategoryItem(R.drawable.blood_drop, "Eye Specialist", 1539));
+        dataList.add(new CategoryItem(R.drawable.blood_drop, "Eye Specialist", 1539));
+        dataList.add(new CategoryItem(R.drawable.blood_drop, "Eye Specialist", 1539));
+        dataList.add(new CategoryItem(R.drawable.blood_drop, "Eye Specialist", 1539));
+
+
         return dataList;
     }
 }
