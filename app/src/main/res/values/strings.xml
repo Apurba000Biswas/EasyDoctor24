@@ -12,4 +12,6 @@
     <string name="category">Category</string>
     <string name="bookHistory">Book History</string>
     <string name="account">Account</string>
+
+    <string name="categoryHeader">More than 500 doctors attend for your service</string>
 </resources>

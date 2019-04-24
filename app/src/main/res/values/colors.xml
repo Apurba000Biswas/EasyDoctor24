@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6271BB</color>
-    <color name="colorPrimaryDark">#6271BB</color>
+    <color name="colorPrimary">#62c24f</color>
+    <color name="colorPrimaryDark">@color/colorBackground</color>
     <color name="colorAccent">#6271BB</color>
 
-    <color name="colorDefaultText">#6271BB</color>
-    <color name="colorRegisterButtonText">#FFFFFF</color>
-    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorBackground">#f9fafa</color>
+
+    <color name="colorAppGreen">#62c24f</color>
+    <color name="colorAppGray">#949595</color>
+    <!--#80ce70 -->
 </resources>
