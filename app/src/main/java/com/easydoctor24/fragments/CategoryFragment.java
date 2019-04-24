@@ -8,15 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.easydoctor24.R;
-import com.easydoctor24.RVOnclickListener;
+import com.easydoctor24.listeners.RVOnclickListener;
 import com.easydoctor24.adapters.CategoryRVAdapter;
 import com.easydoctor24.dataFactory.CategoryData;
-import com.easydoctor24.data_model.CategoryItem;
 
-public class CategoryFragment extends Fragment implements RVOnclickListener{
+public class CategoryFragment extends Fragment{
 
 
 
@@ -36,7 +34,7 @@ public class CategoryFragment extends Fragment implements RVOnclickListener{
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 3);
         recyclerView.setLayoutManager(layoutManager);
         CategoryRVAdapter mAdapter = new CategoryRVAdapter (
-                CategoryData.getCategoryData(), this);
+                CategoryData.getCategoryData(), (RVOnclickListener) getActivity());
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -46,10 +44,4 @@ public class CategoryFragment extends Fragment implements RVOnclickListener{
     }
 
 
-
-
-    @Override
-    public void onItemClicked(CategoryItem clicked) {
-        Toast.makeText(getContext(), "Clicked On " + clicked.getName(), Toast.LENGTH_SHORT).show();
-    }
 }

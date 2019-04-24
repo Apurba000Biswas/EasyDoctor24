@@ -1,5 +1,6 @@
 package com.easydoctor24.activities;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,21 +8,22 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.easydoctor24.R;
+import com.easydoctor24.listeners.RVOnclickListener;
+import com.easydoctor24.data_model.CategoryItem;
 import com.easydoctor24.fragments.AccountFragment;
 import com.easydoctor24.fragments.BookHistoryFragment;
 import com.easydoctor24.fragments.CategoryFragment;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements RVOnclickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        }
+        setNotificationBar();
 
         setNavigation();
         loadFragment(new CategoryFragment());
@@ -63,5 +65,12 @@ public class MainActivity extends BaseActivity {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void onItemClicked(CategoryItem clicked) {
+        Intent intent = new Intent(this, CategoryDetailsActivity.class);
+        intent.putExtra(INTENT_EXTRA_CATEGORY_NAME, clicked.getName());
+        startActivity(intent);
     }
 }

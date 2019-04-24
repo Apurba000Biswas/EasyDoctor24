@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.easydoctor24.R;
-import com.easydoctor24.RVOnclickListener;
+import com.easydoctor24.listeners.RVOnclickListener;
 import com.easydoctor24.data_model.CategoryItem;
 
 import java.util.List;
