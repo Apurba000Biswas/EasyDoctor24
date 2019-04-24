@@ -1,14 +1,11 @@
 package com.easydoctor24.activities;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
 import com.easydoctor24.R;
 import com.easydoctor24.listeners.RVOnclickListener;
@@ -71,6 +68,7 @@ public class MainActivity extends BaseActivity implements RVOnclickListener {
     public void onItemClicked(CategoryItem clicked) {
         Intent intent = new Intent(this, CategoryDetailsActivity.class);
         intent.putExtra(INTENT_EXTRA_CATEGORY_NAME, clicked.getName());
+        intent.putExtra(INTENT_EXTRA_CATEGORY_IMG_ID, clicked.getImgId());
         startActivity(intent);
     }
 }

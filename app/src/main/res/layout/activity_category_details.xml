@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.CategoryDetailsActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/iv_category_details_logo"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:src="@drawable/heart"
+        android:background="@drawable/shape_right_arch"
+        android:layout_width="60dp"
+        android:layout_height="40dp" />
+
+</RelativeLayout>

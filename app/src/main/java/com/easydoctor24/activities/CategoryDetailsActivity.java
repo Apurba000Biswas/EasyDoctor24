@@ -2,6 +2,8 @@ package com.easydoctor24.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.easydoctor24.R;
 
@@ -14,6 +16,14 @@ public class CategoryDetailsActivity extends BaseActivity {
         setNotificationBar();
 
         Intent intent = getIntent();
-        String extra = intent.getStringExtra(INTENT_EXTRA_CATEGORY_NAME);
+        String catagoryType = intent.getStringExtra(INTENT_EXTRA_CATEGORY_NAME);
+        int categoryImgId = intent.getIntExtra(INTENT_EXTRA_CATEGORY_IMG_ID, 0);
+        setHeader(categoryImgId);
+    }
+
+    private void setHeader(int headerImgId){
+        ImageView ivHeaderLogo = findViewById(R.id.iv_category_details_logo);
+        if (headerImgId != 0)
+            ivHeaderLogo.setImageResource(headerImgId);
     }
 }
