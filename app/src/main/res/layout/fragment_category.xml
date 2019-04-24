@@ -6,23 +6,24 @@
     android:layout_marginTop="20dp">
 
     <TextView
-        android:id="@+id/tv_header"
+        android:id="@+id/tv_header_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal"
+        android:textStyle="bold"
         android:text="@string/categoryHeader"
-        android:textColor="@color/colorAppGray"
+        android:textColor="@color/colorAppGreen"
         android:textSize="16sp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_category"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingTop="16dp"
+        android:paddingTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_below="@id/tv_header"
+        android:layout_below="@id/tv_header_category"
         android:layout_centerInParent="true"
         android:drawSelectorOnTop="true"
         android:scrollbars="none"

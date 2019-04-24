@@ -15,4 +15,19 @@
         android:layout_width="60dp"
         android:layout_height="40dp" />
 
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/iv_category_details_filter"
+        android:paddingTop="14dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/ic_action_filter"
+        android:background="@drawable/shape_uper_left_arch"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+
+
 </RelativeLayout>

@@ -22,7 +22,6 @@ public class CategoryFragment extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup vg, Bundle bundle) {
         View rootView = inflater.inflate(R.layout.fragment_category, vg, false);
-
         setRecyclerView(rootView);
         return rootView;
     }
@@ -38,6 +37,7 @@ public class CategoryFragment extends Fragment{
         recyclerView.setAdapter(mAdapter);
     }
 
+    @Override
     public void onActivityCreated(Bundle savedState) {
         super.onActivityCreated(savedState);
         // ... any other GUI initialization needed
