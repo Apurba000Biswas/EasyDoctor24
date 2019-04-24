@@ -4,19 +4,19 @@
 
 
     <item
-        android:id="@+id/action_recents"
+        android:id="@+id/action_category"
         android:enabled="true"
         android:icon="@drawable/health_care"
         android:title="@string/category"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_favorites"
+        android:id="@+id/action_book_history"
         android:enabled="true"
         android:icon="@drawable/medical_kit"
         android:title="@string/bookHistory"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_nearby"
+        android:id="@+id/action_account"
         android:enabled="true"
         android:icon="@drawable/user_logo"
         android:title="@string/account"
