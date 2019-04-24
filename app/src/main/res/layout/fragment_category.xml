@@ -10,7 +10,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/colorDefaultText"
-        android:text="Hello , This is Doctor Fragment"
+        android:text="Hello , This is Category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

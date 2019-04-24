@@ -9,24 +9,24 @@
 
     <fragment
         android:id="@+id/fr_registration"
-        android:name="com.easydoctor24.fragments.RegistrationFragment"
+        android:name="com.easydoctor24.fragments.AccountFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout="@layout/fragment_registration"/>
+        tools:layout="@layout/fragment_account"/>
 
     <fragment
         android:id="@+id/fr_patient"
-        android:name="com.easydoctor24.fragments.PatientFragment"
+        android:name="com.easydoctor24.fragments.BookHistoryFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout="@layout/fragment_patient"/>
+        tools:layout="@layout/fragment_book_history"/>
 
     <fragment
         android:id="@+id/fr_doctor"
-        android:name="com.easydoctor24.fragments.DoctorFragment"
+        android:name="com.easydoctor24.fragments.CategaoryFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout="@layout/fragment_doctor"/>
+        tools:layout="@layout/fragment_category"/>
 
 
 </LinearLayout>
