@@ -11,7 +11,7 @@ import android.view.View;
 import com.easydoctor24.R;
 import com.easydoctor24.fragments.AccountFragment;
 import com.easydoctor24.fragments.BookHistoryFragment;
-import com.easydoctor24.fragments.CategaoryFragment;
+import com.easydoctor24.fragments.CategoryFragment;
 
 public class MainActivity extends BaseActivity {
 
@@ -24,7 +24,7 @@ public class MainActivity extends BaseActivity {
         }
 
         setNavigation();
-        loadFragment(new CategaoryFragment());
+        loadFragment(new CategoryFragment());
 
     }
 
@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity {
                 switch (menuItem.getItemId()) {
 
                     case R.id.action_category:
-                        fragment = new CategaoryFragment();
+                        fragment = new CategoryFragment();
                         break;
                     case R.id.action_book_history:
                         fragment = new BookHistoryFragment();
