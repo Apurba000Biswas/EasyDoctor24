@@ -8,4 +8,8 @@
 
     <string name="hintName">Enter your name</string>
     <string name="hintPhoneNum">Enter your phone number</string>
+
+    <string name="category">Category</string>
+    <string name="bookHistory">Book History</string>
+    <string name="account">Account</string>
 </resources>
