@@ -6,4 +6,5 @@
 
     <color name="colorDefaultText">#6271BB</color>
     <color name="colorRegisterButtonText">#FFFFFF</color>
+    <color name="colorBackground">#FFFFFF</color>
 </resources>
