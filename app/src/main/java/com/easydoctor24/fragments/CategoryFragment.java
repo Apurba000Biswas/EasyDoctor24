@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import com.easydoctor24.R;
 import com.easydoctor24.activities.MainActivity;
 import com.easydoctor24.data_model.DoctorCategoryItem;
-import com.easydoctor24.listeners.RVOnclickListener;
-import com.easydoctor24.adapters.CategoryRVAdapter;
+import com.easydoctor24.listeners.RVDoctorCategoryOnclickListener;
+import com.easydoctor24.adapters.DoctorCategoryRVAdapter;
 
 import java.util.List;
 
@@ -36,8 +36,8 @@ public class CategoryFragment extends Fragment{
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 3);
         recyclerView.setLayoutManager(layoutManager);
         List<DoctorCategoryItem> data = ((MainActivity)getActivity()).getDoctorCategoryData();
-        CategoryRVAdapter mAdapter = new CategoryRVAdapter (
-                data, (RVOnclickListener) getActivity());
+        DoctorCategoryRVAdapter mAdapter = new DoctorCategoryRVAdapter(
+                data, (RVDoctorCategoryOnclickListener) getActivity());
         recyclerView.setAdapter(mAdapter);
     }
 

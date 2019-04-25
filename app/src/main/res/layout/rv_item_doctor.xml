@@ -45,7 +45,7 @@
             <TextView
                 android:text="10.00 Am - 6.00 Pm"
                 android:layout_marginLeft="10dp"
-                android:id="@+id/tv_doctor_available_time"
+                android:id="@+id/tv_doctor_online_time"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
 
