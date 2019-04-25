@@ -11,7 +11,10 @@ import android.widget.Toast;
 import com.easydoctor24.R;
 import com.easydoctor24.adapters.DoctorFragmentPagerAdapter;
 import com.easydoctor24.data_model.Doctor;
+import com.easydoctor24.data_model.DoctorCategoryItem;
 import com.easydoctor24.listeners.RVDoctorClickListener;
+
+import java.util.List;
 
 
 public class CategoryDetailsActivity extends BaseActivity implements RVDoctorClickListener {
@@ -26,21 +29,41 @@ public class CategoryDetailsActivity extends BaseActivity implements RVDoctorCli
         int categoryImgId = intent.getIntExtra(INTENT_EXTRA_CATEGORY_IMG_ID, 0);
         int position = intent.getIntExtra(INTENT_EXTRA_POSITION, 0);
 
+        setViewPager(position);
+        setHeader(categoryImgId, true);
+        setCategoryFilterButton();
+    }
+
+    private void setViewPager(int position){
         ViewPager viewPager = findViewById(R.id.vp_doctorList);
         DoctorFragmentPagerAdapter adapter =
                 new DoctorFragmentPagerAdapter(getSupportFragmentManager(), getDoctorCategoryData());
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(position);
 
-        setHeader(categoryImgId);
-        setCategoryFilterButton();
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {}
+
+            @Override
+            public void onPageSelected(int i) {
+                List<DoctorCategoryItem> categoryItems = getDoctorCategoryData();
+                DoctorCategoryItem curItem = categoryItems.get(i);
+                setHeader(curItem.getImgId(), false);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {}
+        });
     }
 
-    private void setHeader(int headerImgId){
+    private void setHeader(int headerImgId, boolean isActivityLaunched){
         ImageView ivHeaderLogo = findViewById(R.id.iv_category_details_logo);
         if (headerImgId != 0) ivHeaderLogo.setImageResource(headerImgId);
 
-        Animation headerAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_right);
+        Animation headerAnimation = (isActivityLaunched)?
+                AnimationUtils.loadAnimation(this, R.anim.slide_right) :
+                AnimationUtils.loadAnimation(this, R.anim.fade_in);
         setAnimation(ivHeaderLogo, headerAnimation);
     }
 
@@ -62,6 +85,6 @@ public class CategoryDetailsActivity extends BaseActivity implements RVDoctorCli
 
     @Override
     public void onDoctorClick(Doctor clickedDoctor) {
-        Toast.makeText(this, "Cliked on " + clickedDoctor.getName(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Clicked on " + clickedDoctor.getName(), Toast.LENGTH_SHORT).show();
     }
 }
