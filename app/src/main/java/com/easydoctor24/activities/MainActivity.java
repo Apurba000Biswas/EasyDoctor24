@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 
 import com.easydoctor24.R;
+import com.easydoctor24.fragments.MyAppoinmentsFragment;
 import com.easydoctor24.listeners.RVOnclickListener;
 import com.easydoctor24.data_model.CategoryItem;
 import com.easydoctor24.fragments.AccountFragment;
@@ -43,6 +44,9 @@ public class MainActivity extends BaseActivity implements RVOnclickListener {
                         break;
                     case R.id.action_book_history:
                         fragment = new BookHistoryFragment();
+                        break;
+                    case R.id.action_my_Appts:
+                        fragment = new MyAppoinmentsFragment();
                         break;
                     case R.id.action_account:
                         fragment = new AccountFragment();

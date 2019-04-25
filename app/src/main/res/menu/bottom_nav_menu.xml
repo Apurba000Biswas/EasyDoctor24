@@ -8,17 +8,24 @@
         android:enabled="true"
         android:icon="@drawable/health_care"
         android:title="@string/category"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_book_history"
         android:enabled="true"
         android:icon="@drawable/medical_kit"
         android:title="@string/bookHistory"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_my_Appts"
+        android:enabled="true"
+        android:icon="@drawable/calander"
+        android:title="@string/myAppts"
+        app:showAsAction="always" />
+
     <item
         android:id="@+id/action_account"
         android:enabled="true"
         android:icon="@drawable/user_logo"
         android:title="@string/account"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 </menu>
