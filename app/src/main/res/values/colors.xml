@@ -8,5 +8,6 @@
 
     <color name="colorAppGreen">#62c24f</color>
     <color name="colorAppGray">#949595</color>
+    <color name="colorAppBlack">#6b6b6b</color>
     <!--#80ce70 -->
 </resources>

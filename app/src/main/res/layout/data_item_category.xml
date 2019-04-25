@@ -23,7 +23,7 @@
     <TextView
         android:textStyle="bold"
         android:textSize="15sp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorAppBlack"
         android:gravity="center_horizontal"
         android:text="Demo Text"
         android:id="@+id/tv_categoryItem_name"
