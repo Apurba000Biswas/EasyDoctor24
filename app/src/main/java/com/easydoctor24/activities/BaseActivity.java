@@ -17,6 +17,8 @@ public class BaseActivity extends AppCompatActivity {
     protected static final String INTENT_EXTRA_CATEGORY_NAME = "name";
     protected static final String INTENT_EXTRA_CATEGORY_IMG_ID = "imgId";
 
+    private List<DoctorCategoryItem> doctorCategoryItemList;
+
     protected void setNotificationBar(){
         if (isBuildVersionOk()) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
@@ -28,6 +30,9 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected List<DoctorCategoryItem> getDoctorCategoryData(){
-        return DoctorData.getDoctorCategoryData();
+        if(doctorCategoryItemList == null){
+            doctorCategoryItemList = DoctorData.getDoctorCategoryData();
+        }
+        return doctorCategoryItemList;
     }
 }
