@@ -10,10 +10,12 @@ import android.view.MenuItem;
 import com.easydoctor24.R;
 import com.easydoctor24.fragments.MyAppoinmentsFragment;
 import com.easydoctor24.listeners.RVOnclickListener;
-import com.easydoctor24.data_model.CategoryItem;
+import com.easydoctor24.data_model.DoctorCategoryItem;
 import com.easydoctor24.fragments.AccountFragment;
 import com.easydoctor24.fragments.BookHistoryFragment;
 import com.easydoctor24.fragments.CategoryFragment;
+
+import java.util.List;
 
 public class MainActivity extends BaseActivity implements RVOnclickListener {
 
@@ -69,10 +71,15 @@ public class MainActivity extends BaseActivity implements RVOnclickListener {
     }
 
     @Override
-    public void onItemClicked(CategoryItem clicked) {
+    public void onItemClicked(DoctorCategoryItem clicked) {
         Intent intent = new Intent(this, CategoryDetailsActivity.class);
         intent.putExtra(INTENT_EXTRA_CATEGORY_NAME, clicked.getName());
         intent.putExtra(INTENT_EXTRA_CATEGORY_IMG_ID, clicked.getImgId());
         startActivity(intent);
+    }
+
+    @Override
+    public List<DoctorCategoryItem> getDoctorCategoryData(){
+        return super.getDoctorCategoryData();
     }
 }

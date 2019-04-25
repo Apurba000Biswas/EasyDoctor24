@@ -1,14 +1,20 @@
 package com.easydoctor24.data_model;
 
-public class CategoryItem {
+public class DoctorCategoryItem {
     private int imgId;
     private String name;
     private int totalDoctor;
 
-    public CategoryItem(int imgId, String name, int totalDoctor){
+    public DoctorCategoryItem(int imgId, String name, int totalDoctor){
         this.imgId = imgId;
         this.name = name;
         this.totalDoctor = totalDoctor;
+    }
+
+    public DoctorCategoryItem(int imgId, String name){
+        this.imgId = imgId;
+        this.name = name;
+        totalDoctor = 0;
     }
 
     public int getImgId(){

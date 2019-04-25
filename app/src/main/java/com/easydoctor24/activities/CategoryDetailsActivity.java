@@ -17,7 +17,7 @@ public class CategoryDetailsActivity extends BaseActivity {
         setNotificationBar();
 
         Intent intent = getIntent();
-        String catagoryType = intent.getStringExtra(INTENT_EXTRA_CATEGORY_NAME);
+        String categoryType = intent.getStringExtra(INTENT_EXTRA_CATEGORY_NAME);
         int categoryImgId = intent.getIntExtra(INTENT_EXTRA_CATEGORY_IMG_ID, 0);
         setHeader(categoryImgId);
         setCategoryFilter();

@@ -10,17 +10,17 @@ import android.widget.TextView;
 
 import com.easydoctor24.R;
 import com.easydoctor24.listeners.RVOnclickListener;
-import com.easydoctor24.data_model.CategoryItem;
+import com.easydoctor24.data_model.DoctorCategoryItem;
 
 import java.util.List;
 
 public class CategoryRVAdapter extends RecyclerView.Adapter<CategoryRVAdapter.ViewHolder>{
 
 
-    private List<CategoryItem> mDataSet;
+    private List<DoctorCategoryItem> mDataSet;
     private RVOnclickListener mClickListener;
 
-    public CategoryRVAdapter(List<CategoryItem> dataSet, RVOnclickListener clickListener){
+    public CategoryRVAdapter(List<DoctorCategoryItem> dataSet, RVOnclickListener clickListener){
         this.mDataSet = dataSet;
         this.mClickListener = clickListener;
     }
@@ -37,7 +37,7 @@ public class CategoryRVAdapter extends RecyclerView.Adapter<CategoryRVAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        CategoryItem currentData = mDataSet.get(position);
+        DoctorCategoryItem currentData = mDataSet.get(position);
         holder.ivImgId.setImageResource(currentData.getImgId());
         holder.tvName.setText(currentData.getName());
         String totalDoc = currentData.getTotalDoctor() + " Doctors";
@@ -57,7 +57,7 @@ public class CategoryRVAdapter extends RecyclerView.Adapter<CategoryRVAdapter.Vi
 
         View mView;
 
-        private List<CategoryItem> mDataSet;
+        private List<DoctorCategoryItem> mDataSet;
         ImageView ivImgId;
         TextView tvName;
         TextView tvTotalDoctor;
@@ -65,7 +65,7 @@ public class CategoryRVAdapter extends RecyclerView.Adapter<CategoryRVAdapter.Vi
         private RVOnclickListener mListener;
 
         // Constructor - also initialize all fields with views
-        ViewHolder(View v, List<CategoryItem> dataset, RVOnclickListener
+        ViewHolder(View v, List<DoctorCategoryItem> dataset, RVOnclickListener
                 listener) {
             super(v);
             mView = v;
@@ -83,7 +83,7 @@ public class CategoryRVAdapter extends RecyclerView.Adapter<CategoryRVAdapter.Vi
 
         @Override
         public void onClick(View view) {
-            CategoryItem clickedItem = mDataSet.get(getAdapterPosition());
+            DoctorCategoryItem clickedItem = mDataSet.get(getAdapterPosition());
             mListener.onItemClicked(clickedItem);
         }
     }

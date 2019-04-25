@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_doctor_image"
+        android:src="@drawable/doc_demo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"/>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_doctor_name"
+            android:textColor="@color/colorAppBlack"
+            android:textSize="18sp"
+            android:text="Jhon Smith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_doctor_designation"
+            android:textColor="@color/colorAppBlack"
+            android:textSize="15sp"
+            android:text="MBBS and Heart specialist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/clock"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+            <TextView
+                android:text="10.00 Am - 6.00 Pm"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_doctor_available_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/dollar"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:text="200"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_doctor_fees"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_action_right_arrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+</LinearLayout>

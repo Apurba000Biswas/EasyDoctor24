@@ -1,7 +1,7 @@
 package com.easydoctor24.listeners;
 
-import com.easydoctor24.data_model.CategoryItem;
+import com.easydoctor24.data_model.DoctorCategoryItem;
 
 public interface RVOnclickListener {
-    void onItemClicked(CategoryItem clicked);
+    void onItemClicked(DoctorCategoryItem clicked);
 }

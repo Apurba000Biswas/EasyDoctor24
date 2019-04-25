@@ -5,6 +5,11 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.easydoctor24.dataFactory.DoctorData;
+import com.easydoctor24.data_model.DoctorCategoryItem;
+
+import java.util.List;
+
 
 // Base Activity
 @SuppressLint("Registered")
@@ -20,5 +25,9 @@ public class BaseActivity extends AppCompatActivity {
 
     protected boolean isBuildVersionOk(){
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M;
+    }
+
+    protected List<DoctorCategoryItem> getDoctorCategoryData(){
+        return DoctorData.getDoctorCategoryData();
     }
 }
