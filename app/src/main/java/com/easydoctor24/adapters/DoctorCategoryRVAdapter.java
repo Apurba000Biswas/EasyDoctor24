@@ -85,8 +85,9 @@ public class DoctorCategoryRVAdapter extends
 
         @Override
         public void onClick(View view) {
-            DoctorCategoryItem clickedItem = mDataSet.get(getAdapterPosition());
-            mListener.onCategoryClicked(clickedItem);
+            int position = getAdapterPosition();
+            DoctorCategoryItem clickedItem = mDataSet.get(position);
+            mListener.onCategoryClicked(clickedItem, position);
         }
     }
 }

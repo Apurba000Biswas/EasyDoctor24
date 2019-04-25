@@ -71,10 +71,10 @@ public class MainActivity extends BaseActivity implements RVDoctorCategoryOnclic
     }
 
     @Override
-    public void onCategoryClicked(DoctorCategoryItem clicked) {
+    public void onCategoryClicked(DoctorCategoryItem clicked, int position) {
         Intent intent = new Intent(this, CategoryDetailsActivity.class);
-        intent.putExtra(INTENT_EXTRA_CATEGORY_NAME, clicked.getName());
         intent.putExtra(INTENT_EXTRA_CATEGORY_IMG_ID, clicked.getImgId());
+        intent.putExtra(INTENT_EXTRA_POSITION, position);
         startActivity(intent);
     }
 

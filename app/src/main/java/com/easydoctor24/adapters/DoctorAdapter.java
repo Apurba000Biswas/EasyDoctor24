@@ -18,7 +18,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.ViewHolder
     private List<Doctor> mDataSet;
     private RVDoctorClickListener mClickListener;
 
-    DoctorAdapter(List<Doctor> dataSet,
+    public DoctorAdapter(List<Doctor> dataSet,
                                    RVDoctorClickListener clickListener){
         this.mDataSet = dataSet;
         this.mClickListener = clickListener;

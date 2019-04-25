@@ -14,8 +14,8 @@ import java.util.List;
 // Base Activity
 @SuppressLint("Registered")
 public class BaseActivity extends AppCompatActivity {
-    protected static final String INTENT_EXTRA_CATEGORY_NAME = "name";
     protected static final String INTENT_EXTRA_CATEGORY_IMG_ID = "imgId";
+    protected static final String INTENT_EXTRA_POSITION = "position";
 
     private List<DoctorCategoryItem> doctorCategoryItemList;
 
