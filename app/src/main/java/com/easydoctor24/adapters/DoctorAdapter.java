@@ -41,7 +41,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.ViewHolder
         holder.tvDoctorName.setText(currentData.getName());
         holder.tvDoctorDesignation.setText(currentData.getDesignation());
         holder.tvDoctorOnlineTime.setText(currentData.getOnlineTime());
-        holder.tvDoctorFees.setText(currentData.getFees());
+        holder.tvDoctorFees.setText(String.valueOf(currentData.getFees()));
     }
 
     @Override
