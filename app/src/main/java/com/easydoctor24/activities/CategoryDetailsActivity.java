@@ -27,21 +27,22 @@ public class CategoryDetailsActivity extends BaseActivity {
         ImageView ivHeaderLogo = findViewById(R.id.iv_category_details_logo);
         if (headerImgId != 0) ivHeaderLogo.setImageResource(headerImgId);
 
-        if (isBuildVersionOk()){
-            ivHeaderLogo.setElevation(100);
-            Animation headerAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_right);
-            headerAnimation.setDuration(700);
-            ivHeaderLogo.startAnimation(headerAnimation);
-        }
+        Animation headerAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_right);
+        setAnimation(ivHeaderLogo, headerAnimation);
     }
 
     private void setCategoryFilter(){
         ImageView ivCategoryFilter = findViewById(R.id.iv_category_details_filter);
+
+        Animation filterAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        setAnimation(ivCategoryFilter, filterAnimation);
+    }
+
+    private void setAnimation(ImageView imageView, Animation animation){
         if (isBuildVersionOk()){
-            ivCategoryFilter.setElevation(200);
-            Animation filterAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_in);
-            filterAnimation.setDuration(700);
-            ivCategoryFilter.startAnimation(filterAnimation);
+            imageView.setElevation(100);
+            animation.setDuration(700);
+            imageView.startAnimation(animation);
         }
     }
 }
