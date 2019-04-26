@@ -15,4 +15,6 @@
     <string name="myAppts">My Appts</string>
 
     <string name="categoryHeader">More than 500 doctors attend for your service</string>
+
+    <string name="filterDialogTitle">Filter of fees</string>
 </resources>

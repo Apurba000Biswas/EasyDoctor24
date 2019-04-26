@@ -2,7 +2,9 @@ package com.easydoctor24.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -12,6 +14,7 @@ import com.easydoctor24.R;
 import com.easydoctor24.adapters.DoctorFragmentPagerAdapter;
 import com.easydoctor24.data_model.Doctor;
 import com.easydoctor24.data_model.DoctorCategoryItem;
+import com.easydoctor24.fragments.FilterDialogFragment;
 import com.easydoctor24.listeners.RVDoctorClickListener;
 import com.easydoctor24.utils.DepthPageTransformer;
 
@@ -89,5 +92,12 @@ public class CategoryDetailsActivity extends BaseActivity implements RVDoctorCli
     @Override
     public void onDoctorClick(Doctor clickedDoctor) {
         Toast.makeText(this, "Clicked on " + clickedDoctor.getName(), Toast.LENGTH_SHORT).show();
+    }
+
+    public void filterClicked(View view) {
+        FragmentManager fm = getSupportFragmentManager();
+        String title = getResources().getString(R.string.filterDialogTitle);
+        FilterDialogFragment alertDialog = FilterDialogFragment.newInstance(title);
+        alertDialog.show(fm, "fragment_alert");
     }
 }

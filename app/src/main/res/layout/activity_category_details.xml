@@ -28,6 +28,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:id="@+id/iv_category_details_filter"
+        android:onClick="filterClicked"
         android:paddingTop="14dp"
         android:paddingLeft="10dp"
         android:paddingBottom="10dp"
