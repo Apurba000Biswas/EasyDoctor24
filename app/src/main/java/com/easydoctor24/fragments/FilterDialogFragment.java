@@ -11,6 +11,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.easydoctor24.R;
@@ -48,10 +49,12 @@ public class FilterDialogFragment extends DialogFragment {
         return dialog;
     }
 
-    private void setDialogView(View rootView){
+    private void setDialogView(final View rootView){
         SeekBar filterBar = rootView.findViewById(R.id.sb_filter_bar);
         filterBar.setMax(1000);
-        filterBar.setProgress(10);
+        filterBar.setProgress(500);
+        final TextView filterTextView = rootView.findViewById(R.id.tv_filter_fees);
+        filterTextView.setText(String.valueOf(500));
 
         filterBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progressChangedValue = 0;
@@ -59,6 +62,7 @@ public class FilterDialogFragment extends DialogFragment {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
+                filterTextView.setText(String.valueOf(progressChangedValue));
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {}

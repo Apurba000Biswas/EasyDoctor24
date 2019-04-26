@@ -16,5 +16,9 @@
 
     <string name="categoryHeader">More than 500 doctors attend for your service</string>
 
-    <string name="filterDialogTitle">Filter of fees</string>
+    <string name="filterDialogTitle">Filter for fees</string>
+    <string name="filterLow">Low</string>
+    <string name="filterMedium">Medium</string>
+    <string name="filterHigh">High</string>
+    <string name="filterSave">Save</string>
 </resources>

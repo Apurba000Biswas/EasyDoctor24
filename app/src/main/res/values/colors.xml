@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#62c24f</color>
+    <color name="colorPrimary">#15C872</color>
     <color name="colorPrimaryDark">@color/colorBackground</color>
     <color name="colorAccent">@color/colorAppGreen</color>
 
     <color name="colorBackground">#f9fafa</color>
 
-    <color name="colorAppGreen">#62c24f</color>
+    <color name="colorAppGreen">#15C872</color>
     <color name="colorAppGray">#949595</color>
     <color name="colorAppBlack">#6b6b6b</color>
-    <!--#80ce70 -->
+    <!--#62c24f -->
 </resources>
