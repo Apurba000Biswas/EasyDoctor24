@@ -13,6 +13,7 @@ import com.easydoctor24.adapters.DoctorFragmentPagerAdapter;
 import com.easydoctor24.data_model.Doctor;
 import com.easydoctor24.data_model.DoctorCategoryItem;
 import com.easydoctor24.listeners.RVDoctorClickListener;
+import com.easydoctor24.utils.DepthPageTransformer;
 
 import java.util.List;
 
@@ -55,6 +56,8 @@ public class CategoryDetailsActivity extends BaseActivity implements RVDoctorCli
             @Override
             public void onPageScrollStateChanged(int i) {}
         });
+        if (isBuildVersionOk())
+            viewPager.setPageTransformer(true, new DepthPageTransformer());
     }
 
     private void setHeader(int headerImgId, boolean isActivityLaunched){

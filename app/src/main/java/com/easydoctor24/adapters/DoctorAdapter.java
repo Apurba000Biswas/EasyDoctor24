@@ -24,7 +24,6 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.ViewHolder
         this.mClickListener = clickListener;
     }
 
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
@@ -48,9 +47,6 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.ViewHolder
     public int getItemCount() {
         return mDataSet.size();
     }
-
-
-
 
     public static class ViewHolder extends
             RecyclerView.ViewHolder implements View.OnClickListener {
