@@ -91,7 +91,10 @@ public class CategoryDetailsActivity extends BaseActivity implements RVDoctorCli
 
     @Override
     public void onDoctorClick(Doctor clickedDoctor) {
-        Toast.makeText(this, "Clicked on " + clickedDoctor.getName(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, DoctorProfileActivity.class);
+        //intent.putExtra(INTENT_EXTRA_CATEGORY_IMG_ID, clicked.getImgId());
+        //intent.putExtra(INTENT_EXTRA_POSITION, position);
+        startActivity(intent);
     }
 
     public void filterClicked(View view) {

@@ -60,7 +60,7 @@
                     <TextView
                         android:text="10.00 Am - 6.00 Pm"
                         android:layout_marginLeft="10dp"
-                        android:textSize="12sp"
+                        android:textSize="14sp"
                         android:textColor="@color/colorAppGreen"
                         android:id="@+id/tv_doctor_online_time"
                         android:layout_width="wrap_content"
@@ -84,7 +84,7 @@
                     android:textColor="@color/colorAppGreen"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv_doctor_fees"
-                    android:textSize="12sp"
+                    android:textSize="14sp"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
                 </LinearLayout>

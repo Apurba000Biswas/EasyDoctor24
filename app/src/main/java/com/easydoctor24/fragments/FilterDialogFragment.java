@@ -10,6 +10,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,13 +40,22 @@ public class FilterDialogFragment extends DialogFragment {
         View rootView = factory.inflate(R.layout.fragment_filter_dialog, null);
         setDialogView(rootView);
 
+
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
         alertDialogBuilder.setView(rootView);
         alertDialogBuilder.setPositiveButton("", null);
         alertDialogBuilder.setNegativeButton("", null);
 
-        Dialog dialog = alertDialogBuilder.create();
+        final Dialog dialog = alertDialogBuilder.create();
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        ImageView ivClose = rootView.findViewById(R.id.iv_close_filter);
+        ivClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
         return dialog;
     }
 
