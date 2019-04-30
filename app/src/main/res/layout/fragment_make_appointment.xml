@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:paddingBottom="60dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_dialog_background"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_close_filter"
+        android:paddingLeft="18dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:layout_gravity="end"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_action_close"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_choose_time_holder"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_patient_info_holder"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_make_appt_direction"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_circle"
+        android:src="@drawable/ic_next"
+        android:layout_marginTop="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+</LinearLayout>

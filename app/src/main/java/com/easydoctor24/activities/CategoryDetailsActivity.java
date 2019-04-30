@@ -99,7 +99,7 @@ public class CategoryDetailsActivity extends BaseActivity implements RVDoctorCli
     public void filterClicked(View view) {
         FragmentManager fm = getSupportFragmentManager();
         String title = getResources().getString(R.string.filterDialogTitle);
-        FilterDialogFragment alertDialog = FilterDialogFragment.newInstance(title);
-        alertDialog.show(fm, "fragment_alert");
+        FilterDialogFragment filterDialog = FilterDialogFragment.newInstance(title);
+        filterDialog.show(fm, "fragment_alert");
     }
 }

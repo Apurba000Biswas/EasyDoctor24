@@ -28,4 +28,7 @@
     <string name="doctorSpecialization">Specialization</string>
     <string name="doctorProfileAllComments">All Comments</string>
     <string name="doctorProfileMakeAppointment">Make an appointment</string>
+    <string name="appointmentChooseTime">Choose your date and time</string>
+    <string name="appointmentPickDate">Pick date</string>
+    <string name="appointmentPickTime">Pick time</string>
 </resources>
