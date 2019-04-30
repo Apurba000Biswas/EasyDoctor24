@@ -21,4 +21,11 @@
     <string name="filterMedium">Medium</string>
     <string name="filterHigh">High</string>
     <string name="filterSave">Save</string>
+    <string name="doctorDetails">Doctor Profile</string>
+    <string name="doctorTiming">Timing</string>
+    <string name="doctorFees">Fee</string>
+    <string name="doctorMedicalPractise">Medical Practise</string>
+    <string name="doctorSpecialization">Specialization</string>
+    <string name="doctorProfileAllComments">All Comments</string>
+    <string name="doctorProfileMakeAppointment">Make an appointment</string>
 </resources>
