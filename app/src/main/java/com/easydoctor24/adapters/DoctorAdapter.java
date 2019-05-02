@@ -20,6 +20,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.ViewHolder
 
     public DoctorAdapter(List<Doctor> dataSet,
                                    RVDoctorClickListener clickListener){
+        //System.out.println("********** is doctor Empty? " + (dataSet.isEmpty()));
         this.mDataSet = dataSet;
         this.mClickListener = clickListener;
     }

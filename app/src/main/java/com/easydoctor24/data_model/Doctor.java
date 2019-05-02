@@ -29,4 +29,9 @@ public class Doctor {
         return fees;
     }
 
+    @Override
+    public String toString(){
+        return this.name + " " + this.designation;
+    }
+
 }

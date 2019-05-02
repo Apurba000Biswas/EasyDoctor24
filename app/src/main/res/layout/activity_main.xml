@@ -4,12 +4,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
-    <FrameLayout
+
+    <RelativeLayout
         android:id="@+id/fragment_container"
         android:layout_marginBottom="56dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/iv_category_details_logo"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:src="@drawable/heart"
+            android:background="@drawable/shape_right_arch"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+
+
+        <android.support.v4.view.ViewPager
+            android:layout_below="@id/iv_category_details_logo"
+            android:id="@+id/vp_doctorList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+        <ImageView
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_category_details_filter"
+            android:onClick="filterClicked"
+            android:paddingTop="14dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_action_filter"
+            android:background="@drawable/shape_uper_left_arch"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
 
 
     <android.support.design.widget.BottomNavigationView

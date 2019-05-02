@@ -10,8 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activities.DoctorProfileActivity"></activity>
-        <activity android:name=".activities.CategoryDetailsActivity" />
-        <activity android:name=".activities.RegistrationActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
