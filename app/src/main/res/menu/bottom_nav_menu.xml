@@ -4,22 +4,17 @@
 
 
     <item
-        android:id="@+id/action_category"
-        android:enabled="true"
-        android:icon="@drawable/health_care"
-        android:title="@string/category"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/action_book_history"
-        android:enabled="true"
-        android:icon="@drawable/medical_kit"
-        android:title="@string/bookHistory"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/action_my_Appts"
         android:enabled="true"
         android:icon="@drawable/calander"
         android:title="@string/myAppts"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_appts_upcomming"
+        android:enabled="true"
+        android:icon="@drawable/clock"
+        android:title="@string/upcomingAppt"
         app:showAsAction="always" />
 
     <item

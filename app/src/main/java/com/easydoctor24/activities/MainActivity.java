@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
@@ -17,7 +16,6 @@ import com.easydoctor24.R;
 import com.easydoctor24.adapters.DoctorFragmentPagerAdapter;
 import com.easydoctor24.data_model.Doctor;
 import com.easydoctor24.fragments.FilterDialogFragment;
-import com.easydoctor24.listeners.RVDoctorCategoryOnclickListener;
 import com.easydoctor24.data_model.DoctorCategoryItem;
 import com.easydoctor24.listeners.RVDoctorClickListener;
 import com.easydoctor24.utils.DepthPageTransformer;
@@ -40,40 +38,32 @@ public class MainActivity extends BaseActivity implements RVDoctorClickListener 
 
     private void setNavigation() {
         final BottomNavigationView navigationView = findViewById(R.id.bottom_navigation);
-        navigationView.setSelectedItemId(R.id.action_category);
 
         navigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                Fragment fragment = null;
+                Intent intent = null;
                 switch (menuItem.getItemId()) {
 
-                    case R.id.action_category:
-                        //fragment = new CategoryFragment();
-                        //fragment = new CategoryDetailsFragment();
-                        break;
-                    case R.id.action_book_history:
-                        //fragment = new BookHistoryFragment();
-                        break;
                     case R.id.action_my_Appts:
-                        //fragment = new MyAppoinmentsFragment();
+                        intent = new Intent(MainActivity.this, MyAppointmentActivity.class);
+                        break;
+                    case R.id.action_appts_upcomming:
+                        intent = new Intent(MainActivity.this, UpcomingAppointmentActivity.class);
                         break;
                     case R.id.action_account:
-                        //fragment = new AccountFragment();
+                        intent = new Intent(MainActivity.this, PatientAccountActivity.class);
                         break;
                 }
-                return loadFragment(fragment);
+                return startTheActivity(intent);
             }
         });
     }
 
-    private boolean loadFragment(Fragment fragment){
-        if (fragment != null){
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, fragment)
-                    .commit();
+    private boolean startTheActivity(Intent intent){
+        if (intent != null){
+            startActivity(intent);
             return true;
         }
         return false;
@@ -103,6 +93,7 @@ public class MainActivity extends BaseActivity implements RVDoctorClickListener 
         if (isBuildVersionOk())
             viewPager.setPageTransformer(true, new DepthPageTransformer());
     }
+
     private void setHeader(int headerImgId, boolean isActivityLaunched){
         ImageView ivHeaderLogo = findViewById(R.id.iv_category_details_logo);
         if (headerImgId != 0) ivHeaderLogo.setImageResource(headerImgId);
@@ -112,6 +103,7 @@ public class MainActivity extends BaseActivity implements RVDoctorClickListener 
                 AnimationUtils.loadAnimation(this, R.anim.fade_in);
         setAnimation(ivHeaderLogo, headerAnimation);
     }
+
     private void setAnimation(ImageView imageView, Animation animation){
         if (isBuildVersionOk()){
             imageView.setElevation(100);
@@ -119,6 +111,7 @@ public class MainActivity extends BaseActivity implements RVDoctorClickListener 
             imageView.startAnimation(animation);
         }
     }
+
     private void setCategoryFilterButton(){
         ImageView ivCategoryFilter = findViewById(R.id.iv_category_details_filter);
 
