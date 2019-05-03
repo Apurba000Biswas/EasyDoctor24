@@ -42,8 +42,8 @@ public class DoctorCategoryRVAdapter extends
         DoctorCategoryItem currentData = mDataSet.get(position);
         holder.ivImgId.setImageResource(currentData.getImgId());
         holder.tvName.setText(currentData.getName());
-        String totalDoc = currentData.getTotalDoctor() + " Doctors";
-        holder.tvTotalDoctor.setText(totalDoc);
+        //String totalDoc = currentData.getTotalDoctor() + " Doctors";
+        //holder.tvTotalDoctor.setText(totalDoc);
     }
 
     @Override
@@ -80,7 +80,7 @@ public class DoctorCategoryRVAdapter extends
         private void initAllViews(){
             ivImgId = mView.findViewById(R.id.iv_categoryItem_logo);
             tvName = mView.findViewById(R.id.tv_categoryItem_name);
-            tvTotalDoctor = mView.findViewById(R.id.tv_categoryItem_count);
+            //tvTotalDoctor = mView.findViewById(R.id.tv_categoryItem_count);
         }
 
         @Override

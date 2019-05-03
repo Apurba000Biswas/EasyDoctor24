@@ -6,23 +6,30 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.easydoctor24.R;
+import com.easydoctor24.adapters.DoctorCategoryRVAdapter;
 import com.easydoctor24.adapters.DoctorFragmentPagerAdapter;
+import com.easydoctor24.dataFactory.DoctorData;
 import com.easydoctor24.data_model.Doctor;
 import com.easydoctor24.fragments.FilterDialogFragment;
 import com.easydoctor24.data_model.DoctorCategoryItem;
+import com.easydoctor24.listeners.RVDoctorCategoryOnclickListener;
 import com.easydoctor24.listeners.RVDoctorClickListener;
 import com.easydoctor24.utils.DepthPageTransformer;
 
 import java.util.List;
 
-public class MainActivity extends BaseActivity implements RVDoctorClickListener {
+public class MainActivity extends BaseActivity implements
+        RVDoctorClickListener, RVDoctorCategoryOnclickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +38,22 @@ public class MainActivity extends BaseActivity implements RVDoctorClickListener 
         setNotificationBar();
 
         setNavigation();
+        setRecyclerView();
         setViewPager(0);
-        setHeader(R.drawable.ic_action_close, true);
+        setHeader(R.drawable.heart, true);
         setCategoryFilterButton();
+    }
+
+    private void setRecyclerView(){
+        RecyclerView rvCateGory = findViewById(R.id.rv_category_list);
+        rvCateGory.setHasFixedSize(true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this,
+                LinearLayoutManager.HORIZONTAL, false);
+        rvCateGory.setLayoutManager(layoutManager);
+
+        List<DoctorCategoryItem> dataSet = DoctorData.getDoctorCategoryData();
+        DoctorCategoryRVAdapter adapter = new DoctorCategoryRVAdapter(dataSet, this);
+        rvCateGory.setAdapter(adapter);
     }
 
     private void setNavigation() {
@@ -96,6 +116,7 @@ public class MainActivity extends BaseActivity implements RVDoctorClickListener 
 
     private void setHeader(int headerImgId, boolean isActivityLaunched){
         ImageView ivHeaderLogo = findViewById(R.id.iv_category_details_logo);
+        ivHeaderLogo.bringToFront();
         if (headerImgId != 0) ivHeaderLogo.setImageResource(headerImgId);
 
         Animation headerAnimation = (isActivityLaunched)?
@@ -137,5 +158,10 @@ public class MainActivity extends BaseActivity implements RVDoctorClickListener 
         String title = getResources().getString(R.string.filterDialogTitle);
         FilterDialogFragment filterDialog = FilterDialogFragment.newInstance(title);
         filterDialog.show(fm, "fragment_alert");
+    }
+
+    @Override
+    public void onCategoryClicked(DoctorCategoryItem clicked, int position) {
+        Toast.makeText(this, "Clicked on " + clicked.getName(), Toast.LENGTH_SHORT).show();
     }
 }
