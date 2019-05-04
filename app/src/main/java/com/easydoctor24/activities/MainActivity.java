@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity implements
         setNavigation();
         setRecyclerView();
         setViewPager(0);
-        setHeader(R.drawable.heart, true);
+        //setHeader(R.drawable.heart, true);
         setCategoryFilterButton();
     }
 
@@ -65,7 +65,9 @@ public class MainActivity extends BaseActivity implements
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Intent intent = null;
                 switch (menuItem.getItemId()) {
-
+                    case R.id.action_search:
+                        intent = new Intent(MainActivity.this, SearchActivity.class);
+                        break;
                     case R.id.action_my_Appts:
                         intent = new Intent(MainActivity.this, MyAppointmentActivity.class);
                         break;
@@ -94,7 +96,7 @@ public class MainActivity extends BaseActivity implements
         DoctorFragmentPagerAdapter adapter =
                 new DoctorFragmentPagerAdapter(getSupportFragmentManager(), getDoctorCategoryData());
         viewPager.setAdapter(adapter);
-        viewPager.setCurrentItem(position);
+        setViewPagerPosition(position);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -102,9 +104,11 @@ public class MainActivity extends BaseActivity implements
 
             @Override
             public void onPageSelected(int i) {
+                /*
                 List<DoctorCategoryItem> categoryItems = getDoctorCategoryData();
                 DoctorCategoryItem curItem = categoryItems.get(i);
                 setHeader(curItem.getImgId(), false);
+                */
             }
 
             @Override
@@ -114,6 +118,12 @@ public class MainActivity extends BaseActivity implements
             viewPager.setPageTransformer(true, new DepthPageTransformer());
     }
 
+    private void setViewPagerPosition(int position){
+        ViewPager viewPager = findViewById(R.id.vp_doctorList);
+        viewPager.setCurrentItem(position);
+    }
+
+    /*
     private void setHeader(int headerImgId, boolean isActivityLaunched){
         ImageView ivHeaderLogo = findViewById(R.id.iv_category_details_logo);
         ivHeaderLogo.bringToFront();
@@ -124,6 +134,7 @@ public class MainActivity extends BaseActivity implements
                 AnimationUtils.loadAnimation(this, R.anim.fade_in);
         setAnimation(ivHeaderLogo, headerAnimation);
     }
+    */
 
     private void setAnimation(ImageView imageView, Animation animation){
         if (isBuildVersionOk()){
@@ -162,6 +173,12 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     public void onCategoryClicked(DoctorCategoryItem clicked, int position) {
-        Toast.makeText(this, "Clicked on " + clicked.getName(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Clicked on " + clicked.getName(), Toast.LENGTH_SHORT).show();
+        setViewPagerPosition(position);
+        /*
+        List<DoctorCategoryItem> categoryItems = getDoctorCategoryData();
+        DoctorCategoryItem curItem = categoryItems.get(position);
+        setHeader(curItem.getImgId(), false);
+        */
     }
 }

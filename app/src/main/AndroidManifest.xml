@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PatientAccountActivity"></activity>
+        <activity android:name=".activities.SearchActivity"></activity>
+        <activity android:name=".activities.PatientAccountActivity" />
         <activity android:name=".activities.UpcomingAppointmentActivity" />
         <activity android:name=".activities.MyAppointmentActivity" />
         <activity android:name=".activities.DoctorProfileActivity" />

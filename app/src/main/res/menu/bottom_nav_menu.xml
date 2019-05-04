@@ -3,24 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
+
+    <item
+        android:id="@+id/action_search"
+        android:enabled="true"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search"
+        app:showAsAction="ifRoom" />
+
+
     <item
         android:id="@+id/action_my_Appts"
         android:enabled="true"
         android:icon="@drawable/calander"
         android:title="@string/myAppts"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_appts_upcomming"
         android:enabled="true"
         android:icon="@drawable/clock"
         android:title="@string/upcomingAppt"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_account"
         android:enabled="true"
         android:icon="@drawable/user_logo"
         android:title="@string/account"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 </menu>
